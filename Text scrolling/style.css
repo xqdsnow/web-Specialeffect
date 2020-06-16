@@ -1,0 +1,62 @@
+html,body{
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+.container{
+    color: #999999;
+    font-weight: bold;
+    font-size: 36px;
+}
+.scroll{
+    height: 50px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+.scroll div:first-child{
+    animation: show 5s linear infinite;
+}
+
+.scroll > div > div{
+    color: #fff;
+    height: 45px;
+    padding: 4px 12px;
+    margin-bottom: 45px;
+    display: inline-block;
+
+}
+.scroll div div{
+    background-color: #42c58a;
+}
+.scroll div:nth-child(2) div{
+    background-color: #4ec7f3;
+}
+.scroll div:nth-child(3) div{
+    background-color: #fdcb6e;
+}
+@keyframes show {
+    0%{
+        margin-top:-270px ;
+    }
+    5%,35%{
+        /*控制 - 点赞*/
+        margin-top:-190px ;
+    }
+    40%,65%{
+        /*控制 - 投币*/
+        margin-top:-100px ;
+    }
+    70%,99.9%{
+        /*控制 - 收藏*/
+        margin-top:-3px ;
+    }
+    100%{
+        margin-top:-3px ;
+    }
+}
+
