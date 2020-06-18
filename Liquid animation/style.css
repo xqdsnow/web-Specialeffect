@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #010b10;
+}
+.loader{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    filter: url(#gooay); /*引入SVG*/
+}
+.loader span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(0.2s * var(--i)); /*animation-delay -- 等待n秒之后执行动画   calc -- 动态计算*/
+}
+.loader span:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #03a9f4;
+    background: linear-gradient(#fce4ec,#03a9f4);
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%,100%{
+        transform: rotate(360deg);
+    }
+}
