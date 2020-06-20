@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+}
+body{
+    background-color:white;
+    color: black;
+    font-family: Tahoma;
+}
+p{
+    font-size: 24px;
+}
+#wrap{
+    width: 530px;
+    margin: 20px auto 0;
+    height: 1000px;
+}
+h1{
+    margin-bottom: 20px;
+    text-align:center;
+    font-size: 35px;
+    font-family: Tahoma;
+    color: white;
+}
+#form-warp{
+    overflow: hidden;
+    height: 447px;
+    position: relative;
+    top: 0;
+    transition: all 1s ease-in-out .3s;
+}
+#form-warp:before{
+    content: "";
+    position: absolute;
+    bottom: 128px;
+    left: 0;
+    background: url("images/before.png");
+    width: 530px;
+    height: 317px;
+}
+#form-warp:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url("images/after.png");
+    width: 530px;
+    height: 259px;
+}
+#form-warp.hide:after,
+#form-warp.hide:before{
+    display: none;
+}
+#form-warp:hover{
+    height: 777px;
+    top: -200px;
+}
+form{
+    background: white;
+    position: relative;
+    top: 200px;
+    overflow: hidden;
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #f8f5f1;
+    border-radius: 3px;
+    transition: all 1s ease-in-out .3s;
+    box-shadow: 1px 1px 6px #575e5e;
+}
+#form-warp:hover form{
+    height: 530px;
+}
+lable{
+    margin: 11px 20px 0 0;
+    font-size: 15px;
+    color: gray;
+    text-transform:uppercase;
+}
+input[type=text], textarea{
+    font: 14px noraml uppercase, arial, Serif;
+    color: dimgray;
+    background: none;
+    width: 380px;
+    height: 37px;
+    padding: 0px 10px;
+    margin: 0 0 10px 0;
+    border: 1px solid #f8f5f1;
+    border-radius: 5px;
+}
+textarea{
+    height: 80px;
+    padding-top: 14px;
+}
+textarea:focus,
+input[type=text]:focus{
+    background: white;
+}
+#form-warp input[type=submit]{
+    position:relative;
+    font-family: Tahoma;
+    font-size: 24px;
+    color: gray;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    background: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: opacity 0.7s ease-in-out 0s;
+}
+#form-warp:hover input[type=submit]{
+    z-index:1;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out 1.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
